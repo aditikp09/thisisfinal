@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Packet Sniffing and Logging Demo</title>
+  </head>
+  <body>
+    <h1>Enter Command</h1>
+    <form method="post" action="/execute">
+      <input type="text" name="command" placeholder="Enter command">
+      <input type="submit" value="Execute">
+    </form>
+
+    <h2>Recent Packets</h2>
+    <ul>
+    {% for packet in packets %}
+      <li>{{ packet }}</li>
+    {% endfor %}
+    </ul>
+  </body>
+</html>
